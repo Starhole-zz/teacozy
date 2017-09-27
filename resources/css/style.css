@@ -1,0 +1,169 @@
+html, body, a {
+  background-color: black;
+	border: 0;
+  color: seashell;
+  font-family: 'Helvetica';
+  font-size: 22px;
+  margin: 0;
+  opacity: 0.9;
+  padding: 0;
+  text-align: center;
+}
+
+h2, h3, h4 {
+  background-color: black;
+  margin: 0;
+  padding: 10px;
+}
+
+/*Header styles*/
+/*-------------*/
+
+body>header {
+  background-color: black;
+  border-bottom: 1px solid seashell;
+  display: flex;
+  height: 69px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+} /* '>' modifier used to select immediate child, else all <header> tags in <body> are affected*/
+
+body>header img {
+  height: 50px;
+  margin: 10px;
+  width: auto;
+} /* '>' modifier used to select immediate child, else all <header> tags in <body> are affected*/
+
+nav {
+  margin: auto 0;
+} /*used to center nav elements vertically*/
+
+nav a {
+  padding-right: 20px;
+  text-decoration: underline;
+}
+
+/*Main content: mission statement and featured tea gallery.*/
+/*---------------------------------------------------------*/
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 69px; /*to compensate for 'fixed' header*/
+  width: 1200px; /*constraint for '#mission' section; used here to provide guideline for all other elements in 'main'*/
+}
+
+/*Mission statement w/ background*/
+/*-------------------------------*/
+
+#mission {
+  background: url(../images/img-mission-background.jpg);
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: center;
+  width: 100%;
+}
+
+/*Featured tea gallery*/
+/*--------------------*/
+
+#featured {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0;
+  margin: 0 auto;
+  width: 1000px; /*constraint*/
+} /* content + padding = 770px */
+
+.gallery {
+  display: inline-flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.gallery img {
+  height: 200px; /*constraint*/
+  margin: 10px; /*constraint*/
+  width: auto; /*auto used to keep original image proportions; auto defaults to 300px, which meets requirements*/
+}
+
+figure {
+  margin: 0;
+  padding: 5px;
+}
+
+figure h4 {
+  margin: 0;
+  padding: 0 5px 5px 5px;
+}
+
+/*Location information*/
+/*--------------------*/
+
+#locations {
+  background: url(../images/img-locations-background.jpg);
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  padding-top: 70px;
+  width: 100%;
+}
+
+#locations h2 {
+  background: none;
+} /*to remove global 'h2' formatting of 'background-color: black' above*/
+
+#locations header {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#locations section {
+  display: inline-flex;
+  justify-content: center;
+  padding: 5px; /*add to global 'h2' padding of 10px = 15px; meets requirement b/w header and info blocks*/
+}
+
+.loc_info {
+  background-color: black;
+  margin: 0 20px; /*to meet 40px b/w images*/
+  padding: 10px;
+  opacity: 1;
+  width: 280px;
+} /* width + 2(padding) = 300px; meets required width and adds extra padding to improve spacing*/
+
+.loc_info p {
+  margin: 0;
+  padding: 22px 0;
+} /*to rid of default 'p' margins; replaced w/ padding instead to prevent collapse*/
+
+/*Contact and copyright information*/
+/*---------------------------------*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#contact {
+  height: 200px; /*constraint*/
+}
+
+#contact h5 {
+  text-align: center;
+}
+
+#copy h5 {
+  margin-left: 20px; /*constraint*/
+  text-align: left;
+}
